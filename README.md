@@ -7,7 +7,7 @@ Lightweight multi-paradigm PHP (JSON) client for the [Shopify API](http://api.sh
 
 * PHP 4 with [cURL support](http://php.net/manual/en/book.curl.php).
 * Only compatible OAuth Shopify Apps.  For Legacy Authentication: [Use an old version of ohShopify.php](https://github.com/cmcdonaldca/ohShopify.php/blob/7ee7a344ca83518a0560ba585d4f8deab65bf5cd/shopify.php)
-
+* Download the file from "http://curl.haxx.se/ca/cacert.pem" then store it at project's folder and then write the filepath at the line "curl_setopt ($ch, CURLOPT_CAINFO, getcwd()."/includes/lib/cacert.pem");"
 
 ## Getting Started
 
