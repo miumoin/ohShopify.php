@@ -107,6 +107,9 @@ class ShopifyClient {
 		curl_setopt($ch, CURLOPT_USERAGENT, 'HAC');
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
+                curl_setopt ($ch, CURLOPT_CAINFO, getcwd()."cacert.pem");
+
 
 		curl_setopt ($ch, CURLOPT_CUSTOMREQUEST, $method);
 		if (!empty($request_headers)) curl_setopt($ch, CURLOPT_HTTPHEADER, $request_headers);
